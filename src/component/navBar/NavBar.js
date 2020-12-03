@@ -5,6 +5,9 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
+import { Link } from "react-router-dom";
+import SignedIn from "./SignedIn";
+import SignedOut from "./SignedOut";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,12 +34,14 @@ const NavBar = () => {
             aria-label="menu"
           ></IconButton>
           <Typography variant="h6" className={classes.title}>
-            React Blog
+            <Link to="/">React Blog</Link>
           </Typography>
-          <Button color="inherit">Login</Button>
-          <Button color="inherit">Login</Button>
-          <Button color="inherit">Login</Button>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit">
+            <SignedOut />
+          </Button>
+          <Button color="inherit">
+            <SignedIn />
+          </Button>
         </Toolbar>
       </AppBar>
     </div>
