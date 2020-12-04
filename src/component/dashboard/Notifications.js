@@ -3,7 +3,9 @@ import React from "react";
 const Notifications = () => {
   return (
     <div>
-      <p>Notifications</p>
+      <h2>Notifications</h2>
+      <p>dummy text</p>
+      <p>dummy text and date</p>
     </div>
   );
 };
