@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import Button from "../../utility/Button";
+import Input from "../../utility/Input";
+import StyledPage from "../../utility/Styled";
+import StyledH1 from "../../utility/StyledH1";
 
 export default class SignUp extends Component {
   state = {
@@ -18,30 +22,30 @@ export default class SignUp extends Component {
   };
   render() {
     return (
-      <div>
+      <StyledPage>
         <form onSubmit={this.handleSubmit}>
-          <h5>Sihn In</h5>
+          <StyledH1>Sign Up</StyledH1>
           <div>
             <label htmlFor="firstName">First Name</label>
-            <input type="text" id="firstName" onChange={this.handleChange} />
+            <Input type="text" id="firstName" onChange={this.handleChange} />
           </div>{" "}
           <div>
             <label htmlFor="lastName">Last Name</label>
-            <input type="text" id="lastName" onChange={this.handleChange} />
+            <Input type="text" id="lastName" onChange={this.handleChange} />
           </div>
           <div>
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" onChange={this.handleChange} />
+            <Input type="email" id="email" onChange={this.handleChange} />
           </div>
           <div>
             <label htmlFor="password">Password</label>
-            <input type="password" id="password" onChange={this.handleChange} />
+            <Input type="password" id="password" onChange={this.handleChange} />
           </div>
           <div>
-            <button>Login</button>
+            <Button>Sign Up</Button>
           </div>
         </form>
-      </div>
+      </StyledPage>
     );
   }
 }

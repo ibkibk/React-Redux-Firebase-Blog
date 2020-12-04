@@ -27,12 +27,6 @@ const NavBar = () => {
     <div>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          ></IconButton>
           <Typography variant="h6" className={classes.title}>
             <Link to="/" style={{ color: "white", textDecoration: "none" }}>
               React Blog

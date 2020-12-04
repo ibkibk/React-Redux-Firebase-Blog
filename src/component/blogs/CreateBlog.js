@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-
+import Button from "../../utility/Button";
+import Input from "../../utility/Input";
+import TextField from "../../utility/TextField";
+import StyledPage from "../../utility/Styled";
+import StyledH1 from "../../utility/StyledH1";
 export default class CreateBlog extends Component {
   state = {
     title: "",
@@ -16,24 +20,25 @@ export default class CreateBlog extends Component {
   };
   render() {
     return (
-      <div>
+      <StyledPage>
         <form onSubmit={this.handleSubmit}>
-          <h5>Create new Blog</h5>
+          <StyledH1>Create new Blog</StyledH1>
           <div>
             <label htmlFor="title">Title</label>
-            <input type="text" id="title" onChange={this.handleChange} />
+            <Input type="text" id="title" onChange={this.handleChange} />
           </div>
           <div>
-            <label htmlFor="content">Password</label>
-            <textarea type="text" id="content" onChange={this.handleChange}>
+            <label htmlFor="content">Create Blog Content</label>
+            <br></br>
+            <TextField type="text" id="content" onChange={this.handleChange}>
               Blog Content
-            </textarea>
+            </TextField>
           </div>
           <div>
-            <button>Create</button>
+            <Button>Create</Button>
           </div>
         </form>
-      </div>
+      </StyledPage>
     );
   }
 }

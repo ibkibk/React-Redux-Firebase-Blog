@@ -21,7 +21,7 @@ function SignedOut() {
           to="/signin"
           style={{ color: "white", textDecoration: "none" }}
         >
-          Login
+          SignIn
         </NavLink>
       </Button>
 
