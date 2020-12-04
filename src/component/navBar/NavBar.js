@@ -34,7 +34,9 @@ const NavBar = () => {
             aria-label="menu"
           ></IconButton>
           <Typography variant="h6" className={classes.title}>
-            <Link to="/">React Blog</Link>
+            <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+              React Blog
+            </Link>
           </Typography>
           <Button color="inherit">
             <SignedOut />

@@ -8,11 +8,15 @@ function SignedOut() {
       {/* <li> */}
       <Button>
         {" "}
-        <NavLink to="/">SignUp</NavLink>
+        <NavLink to="/" style={{ color: "white", textDecoration: "none" }}>
+          SignUp
+        </NavLink>
       </Button>
       <Button>
         {" "}
-        <NavLink to="/">Login</NavLink>
+        <NavLink to="/" style={{ color: "white", textDecoration: "none" }}>
+          Login
+        </NavLink>
       </Button>
 
       {/* </li> */}

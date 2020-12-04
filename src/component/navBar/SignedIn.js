@@ -8,15 +8,21 @@ function SignedIn() {
       {/* <li> */}
       <Button>
         {" "}
-        <NavLink to="/">New Blog</NavLink>
+        <NavLink to="/" style={{ color: "white", textDecoration: "none" }}>
+          New Blog
+        </NavLink>
       </Button>
       <Button>
         {" "}
-        <NavLink to="/">Log Out</NavLink>
+        <NavLink to="/" style={{ color: "white", textDecoration: "none" }}>
+          Log Out
+        </NavLink>
       </Button>
       <Button>
         {" "}
-        <NavLink to="/">Ibrahim Kurhan</NavLink>
+        <NavLink to="/" style={{ color: "white", textDecoration: "none" }}>
+          Ibrahim Kurhan
+        </NavLink>
       </Button>
       {/* </li> */}
     </ul>
