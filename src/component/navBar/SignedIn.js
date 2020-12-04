@@ -8,7 +8,10 @@ function SignedIn() {
       {/* <li> */}
       <Button>
         {" "}
-        <NavLink to="/" style={{ color: "white", textDecoration: "none" }}>
+        <NavLink
+          to="/create"
+          style={{ color: "white", textDecoration: "none" }}
+        >
           New Blog
         </NavLink>
       </Button>
