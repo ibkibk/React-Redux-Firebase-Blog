@@ -5,7 +5,6 @@ import Button from "@material-ui/core/Button";
 function SignedIn() {
   return (
     <ul>
-      {/* <li> */}
       <Button>
         {" "}
         <NavLink
@@ -27,7 +26,6 @@ function SignedIn() {
           Ibrahim Kurhan
         </NavLink>
       </Button>
-      {/* </li> */}
     </ul>
   );
 }

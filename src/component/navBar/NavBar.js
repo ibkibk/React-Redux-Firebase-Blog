@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
 import { Link } from "react-router-dom";
 import SignedIn from "./SignedIn";
 import SignedOut from "./SignedOut";
@@ -20,7 +19,15 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
-const NavBar = () => {
+
+const NavBar = (props) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const links = isLoggedIn ? (
+    <SignedIn onClick={() => setIsLoggedIn((isLoggedIn) => !isLoggedIn)} />
+  ) : (
+    <SignedOut onClick={() => setIsLoggedIn((isLoggedIn) => isLoggedIn)} />
+  );
   const classes = useStyles();
 
   return (
@@ -31,13 +38,17 @@ const NavBar = () => {
             <Link to="/" style={{ color: "white", textDecoration: "none" }}>
               React Blog
             </Link>
+            <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+              React Blog
+            </Link>
           </Typography>
-          <Button color="inherit">
-            <SignedOut />
+          {links}
+          {/* <Button color="inherit">
+            <SignedOut onClick={() => setIsLoggedIn(false)} />
           </Button>
           <Button color="inherit">
-            <SignedIn />
-          </Button>
+            <SignedIn onClick={() => setIsLoggedIn(true)} />
+          </Button> */}
         </Toolbar>
       </AppBar>
     </div>
